@@ -1,11 +1,20 @@
 spring:
+  application:
+    name: ms-config
   cloud:
     config:
       server:
-        native:
-          search-locations: classpath:/shared
-  profiles:
-     active: native
+        git:
+          uri: https://github.com/davidsky11/config-server-repo  # 配置Git仓库地址
+          search-paths: shared   # git仓库地址下的相对地址，可以配置多个，用','分隔
+          clone-on-start: true
+          force-pull: true
+          username: davidsky11@126.com
+          password:
+#        native:
+#          search-locations: classpath:/shared
+#  profiles:
+#     active: native
 
 server:
   port: 8888

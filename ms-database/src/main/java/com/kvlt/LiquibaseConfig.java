@@ -1,4 +1,4 @@
-package com.kvlt.config;
+package com.kvlt;
 
 import org.springframework.context.annotation.Configuration;
 
