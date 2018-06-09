@@ -1,0 +1,10 @@
+package com.kvlt.common.exception.auth;
+
+import com.kvlt.common.constant.CommonConstants;
+import com.kvlt.common.exception.BaseException;
+
+public class ClientTokenException extends BaseException {
+    public ClientTokenException(String message) {
+        super(message, CommonConstants.EX_CLIENT_INVALID_CODE);
+    }
+}
